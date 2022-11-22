@@ -8,6 +8,8 @@ Caso não lembre como funciona o processo de entrega, clique [**aqui**](https://
 
 ## Como eu vou executar os exercícios?
 
+pode usar este template do codesandbox: https://codesandbox.io/s/boring-goldberg-gi9b07?file=/src/App.js
+
 O exercício de hoje é construir um Custom Hook que gerencia um **contador**, que tem valores numéricos que **incrementam** e **decrementam**, e que pode ser zerado. Vamos entender um caso de uso para este Custom Hook.
 
 Imagine que você está construindo um e-commerce. Sempre que uma pessoa quiser comprar um item, ela deve ser capaz de selecionar a quantidade de itens que quer. Algo parecido com isso:
