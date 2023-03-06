@@ -8,7 +8,7 @@ Caso não lembre como funciona o processo de entrega, clique [**aqui**](https://
 
 ## Como eu vou executar os exercícios?
 
-pode usar este template do codesandbox: https://codesandbox.io/s/boring-goldberg-gi9b07
+pode usar este template do codesandbox: https://codesandbox.io/s/custom-hooks-exercicio-389k5l
 
 O exercício de hoje é construir um Custom Hook que gerencia um **contador**, que tem valores numéricos que **incrementam** e **decrementam**, e que pode ser zerado. Vamos entender um caso de uso para este Custom Hook.
 
