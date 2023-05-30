@@ -1,12 +1,19 @@
-import './App.css';
-import { Cart } from './components/Cart';
+
+import { GlobalStyle } from './GlobalStyle'
+import Router from "./routes/Router";
+
 
 function App() {
+ 
   return (
     <div>
-    <Cart />
-  </div>
+      <GlobalStyle />
+      <Router/>
+    </div>
   );
 }
 
 export default App;
+
+
+
