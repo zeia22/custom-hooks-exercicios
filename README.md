@@ -10,66 +10,24 @@ Caso não lembre como funciona o processo de entrega, clique [**aqui**](https://
 
 Você pode usar este template do github ou o [**template do codesandbox**](https://codesandbox.io/s/custom-hooks-exercicio-389k5l)
 
-O exercício de hoje é construir um Custom Hook que gerencia um **contador**, que tem valores numéricos que **incrementam** e **decrementam**, e que pode ser zerado. Vamos entender um caso de uso para este Custom Hook.
+No exercicios de hoje vamos utilizar a API do Star Wars. Ela é uma API pública que fornece dados relacionados ao universo Star Wars, incluindo informações sobre filmes, personagens, planetas, naves espaciais, espécies e muito mais.
+https://swapi.dev/ 
 
-Imagine que você está construindo um e-commerce. Sempre que uma pessoa quiser comprar um item, ela deve ser capaz de selecionar a quantidade de itens que quer. Algo parecido com isso:
-![image](https://user-images.githubusercontent.com/11279432/203055699-c31bbbdf-bd80-4c04-bacb-e79c1abc01eb.png)
+No exercício de hoje você deverá criar um Custom Hook de requisição que seja reutilizado nas três páginas do site: filmes(FilmListPage.js), personagens(CharactersListPage.js) e naves(StarShipsListPage.js) do Star Wars.
 
+# Exercício 1
+Extraia a lógica das requisições já existente no template e construa três custom hooks:
+- useGetFilms (Custom Hook para pegar  os filmes do Star Wars)
+- useGetCharacter (Custom Hook para pegar o nome dos personagens do Star Wars)
+- useGetStarShips (Custom Hook para pegar as naves do Star Wars)
 
-O código do componente “Cart” (ou Carrinho) está assim:
-
-```jsx
-const Cart = () => {
-  const [quantity, setQuantity] = useState(0);
-
-  return (
-    <div className="Cart">
-      <h1>Meu carrinho</h1>
-      <Item
-        label="My produto massa"
-        quantity={quantity}
-        onIncrement={() => setQuantity((q) => q + 1)}
-        onDecrement={() => setQuantity((q) => q - 1)}
-        onReset={() => setQuantity(0)}
-      />
-    </div>
-  );
-}
-```
-
-Este componente pode ser simplificado ao criar um Custom Hook `useCounter`. Algo como:
-
-```jsx
-function Cart() {
-  const quantity = useCounter(0);
-
-  return (
-    <div className="Cart">
-      <h1>Meu Carrinho</h1>
-      <Item
-        label="My produto massa"
-        quantity={quantity.value}
-        onIncrement={quantity.increment}
-        onDecrement={quantity.decrement}
-        onReset={quantity.reset}
-      />
-    </div>
-  );
-}
-```
-
-O exercício de hoje é implementar este Custom Hook! Ao terminar você deve ter algo assim:
+# Exercício 2
+- Utilize o exemplo do useRequestData do material assíncrono e reorganize o código do exercício 1, de modo a permitir a reutilização da lógica para todas as requisições projeto.
 
 
-https://user-images.githubusercontent.com/11279432/203056366-0f861e64-5a4e-4249-96f4-26d9ce2d6dfd.mp4
+# Exercício 3
+Atualize o useRequestData do exercício anterior:
+- Faça o tratamento de erros: ele deve mostrar os  erros de requisição para o usuário.
+- Adicione um indicador de carregamento: o usuário deve saber que os dados estão sendo carregados. 
+- Utilize o nome isLoading como variável de estado.
 
-
-
-Caso tenha conseguido construir, temos algumas sugestões de como melhorar:
-
-- Adicionar um parâmetro de “quantidade de aumento”. Isto é, ao invés de subir de 1 em 1, este valor poder ser customizado
-    - algo como `counter.increment(step)`)
-- Adicionar um valor mínimo e máximo
-    - algo como `useCounter({ min: 0, max: 10, initial: 0}))`;
-- Poder definir o valor do contador escrevendo no campo ao invés de apenas usar + e -
-    - algo como `counter.set(value)`
