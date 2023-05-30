@@ -17,17 +17,17 @@ No exercício de hoje você deverá criar um Custom Hook de requisição que sej
 
 # Exercício 1
 Extraia a lógica das requisições já existente no template e construa três custom hooks:
-- useGetFilms (Custom Hook para pegar  os filmes do Star Wars)
-- useGetCharacter (Custom Hook para pegar o nome dos personagens do Star Wars)
-- useGetStarShips (Custom Hook para pegar as naves do Star Wars)
+- **useGetFilms** (Custom Hook para pegar  os filmes do Star Wars)
+- **useGetCharacter** (Custom Hook para pegar o nome dos personagens do Star Wars)
+- **useGetStarShips** (Custom Hook para pegar as naves do Star Wars)
 
 # Exercício 2
-- Utilize o exemplo do useRequestData do material assíncrono e reorganize o código do exercício 1, de modo a permitir a reutilização da lógica para todas as requisições projeto.
+- Utilize o exemplo do **useRequestData do material assíncrono** e reorganize o código do exercício 1, de modo a permitir a reutilização da lógica para todas as requisições projeto.
 
 
 # Exercício 3
-Atualize o useRequestData do exercício anterior:
+Atualize o **useRequestData** do exercício anterior:
 - Faça o tratamento de erros: ele deve mostrar os  erros de requisição para o usuário.
 - Adicione um indicador de carregamento: o usuário deve saber que os dados estão sendo carregados. 
-- Utilize o nome isLoading como variável de estado.
+- Utilize o nome "isLoading" como variável de estado.
 
